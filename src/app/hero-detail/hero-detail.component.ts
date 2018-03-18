@@ -14,4 +14,8 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  public isHeroSet(): boolean {
+    return this.hero !== undefined;
+  }
+
 }
