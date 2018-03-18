@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Hero } from '../model/hero';
 import { HEROES } from '../mock-heroes';
+import { StaticHeroService } from '../hero/static-hero.service';
+import { HeroService } from '../hero/hero.service';
+import { HeroServiceInjection } from '../app.injectables';
 
 @Component({
   selector: 'app-heroes',
@@ -8,7 +11,7 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  public heroes: Hero[] = HEROES;
+  public heroes: Hero[] = [];
   public selectedHero: Hero;
 
   public onSelect(hero: Hero) {
@@ -27,9 +30,16 @@ export class HeroesComponent implements OnInit {
     return this.selectedHero !== undefined;
   }
 
-  constructor() { }
+  constructor(@Inject(HeroServiceInjection) private heroService: HeroService) {
+    this.heroService = heroService;
+  }
 
   ngOnInit() {
+    this.fetchHeroes();
+  }
+
+  private fetchHeroes(): any {
+    this.heroes = this.heroService.all();
   }
 
 }
