@@ -39,7 +39,7 @@ export class HeroesComponent implements OnInit {
   }
 
   private fetchHeroes(): any {
-    this.heroes = this.heroService.all();
+    this.heroService.all().subscribe(heroes => this.heroes = heroes);
   }
 
 }

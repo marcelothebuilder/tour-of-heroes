@@ -1,5 +1,6 @@
 import { Hero } from '../model/hero';
+import { Observable } from 'rxjs/Observable';
 
 export interface HeroService {
-    all(): Array<Hero>;
+    all(): Observable<Array<Hero>>;
 }
