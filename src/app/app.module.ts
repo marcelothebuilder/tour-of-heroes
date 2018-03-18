@@ -10,7 +10,8 @@ import { StaticHeroService } from './hero/static-hero.service';
 import { HeroService } from './hero/hero.service';
 import { HeroServiceInjection } from './app.injectables';
 import { MessagesComponent } from './messages/messages.component';
-import {MessageService } from './message/message.service';
+import { MessageService } from './message/message.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MessageService } from './message/message.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     {
