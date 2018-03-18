@@ -4,6 +4,7 @@ import { HEROES } from '../mock-heroes';
 import { StaticHeroService } from '../hero/static-hero.service';
 import { HeroService } from '../hero/hero.service';
 import { HeroServiceInjection } from '../app.injectables';
+import { MessageService } from '../message/message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -30,8 +31,8 @@ export class HeroesComponent implements OnInit {
     return this.selectedHero !== undefined;
   }
 
-  constructor(@Inject(HeroServiceInjection) private heroService: HeroService) {
-    this.heroService = heroService;
+  constructor(@Inject(HeroServiceInjection) private heroService: HeroService,
+    private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -39,7 +40,13 @@ export class HeroesComponent implements OnInit {
   }
 
   private fetchHeroes(): any {
-    this.heroService.all().subscribe(heroes => this.heroes = heroes);
+    this.heroService.all()
+      .subscribe(heroes => this.handleHeroesFetchedSuccessfully(heroes));
+  }
+
+  private handleHeroesFetchedSuccessfully(heroes: Hero[]): any {
+    this.heroes = heroes;
+    this.messageService.add(`${heroes.length} heroes fetched!`);
   }
 
 }

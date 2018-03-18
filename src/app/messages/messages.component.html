@@ -1,0 +1,10 @@
+<div *ngIf="isAnyMessageAvailable()" class="container">
+
+  <h2>Messages</h2>
+  <button class="clear" (click)="clearMessages()">clear</button>
+  <div *ngFor='let message of messages()' class="message">
+    <span class="message-time">{{message.time | date:'shortTime'}}</span>
+    <span class="message-text">{{message.text}}</span>
+  </div>
+
+</div>
