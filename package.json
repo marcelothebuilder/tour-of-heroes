@@ -1,7 +1,15 @@
 {
-  "name": "angular-tour-of-heroes",
-  "version": "0.0.0",
+  "name": "tour-of-heroes",
+  "version": "0.0.1",
   "license": "MIT",
+  "author": {
+    "name": "Marcelo Paixão Resende",
+    "url": "https://github.com/marcelothebuilder/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelothebuilder/tour-of-heroes"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
