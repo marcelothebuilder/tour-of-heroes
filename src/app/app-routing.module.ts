@@ -7,6 +7,9 @@ const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: '', redirectTo: 'heroes', pathMatch: 'full'
   }
 ];
 
