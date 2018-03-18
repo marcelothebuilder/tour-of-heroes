@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Hero } from '../model/hero';
 import { HEROES } from '../mock-heroes';
-import { StaticHeroService } from '../hero/static-hero.service';
 import { HeroService } from '../hero/hero.service';
 import { HeroServiceInjection } from '../app.injectables';
 import { MessageService } from '../message/message.service';
