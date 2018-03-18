@@ -1,0 +1,58 @@
+@import 'src/colors.scss';
+
+.heroes {
+    padding: 0;
+}
+
+.hero {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: transparent 1px solid;
+    transition: all 0.25s;
+}
+
+.hero + .hero {
+    margin-top: 4px;
+}
+
+.badge {
+    padding: 12px;
+    background: $color-electron-blue;
+    color: $color-city-lights;
+    transition: all 0.25s;
+}
+
+.name {
+    padding: 12px;
+    color: $color-dracula-orchid;
+    flex: 1;
+    background: $color-city-lights;
+    transition: all 0.25s;
+}
+
+.hero:hover {
+    cursor: pointer;
+
+    .name {
+        background: $color-city-lights--lighter;
+    }
+
+    .badge {
+        background: $color-electron-blue--lighter;
+    }
+}
+
+.hero.active {
+    border: $color-chi-gong 1px solid;
+    .badge {
+        background: $color-chi-gong;
+    }
+    .name {
+        color: $color-chi-gong;
+    }
+}
