@@ -23,10 +23,7 @@ export class HttpHeroService implements HeroService {
     }
 
     public byId(id: number): Observable<Hero> {
-        return this.all()
-            .map(heroes => {
-                return heroes.find(hero => hero.id === id);
-            });
+        return this.httpClient.get<Hero>(`hero/${id}`);
     }
 
 
