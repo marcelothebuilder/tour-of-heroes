@@ -18,6 +18,10 @@ export class HeroesComponent implements OnInit {
     private messageService: MessageService) {
   }
 
+  ngOnInit() {
+    this.fetchHeroes();
+  }
+
   public onSelect(hero: Hero) {
     this.selectedHero = hero;
   }
@@ -40,10 +44,6 @@ export class HeroesComponent implements OnInit {
 
   public isAnyHeroSelected(): boolean {
     return this.selectedHero !== undefined;
-  }
-
-  ngOnInit() {
-    this.fetchHeroes();
   }
 
   private fetchHeroes(): any {
