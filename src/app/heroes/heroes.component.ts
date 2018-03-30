@@ -36,6 +36,7 @@ export class HeroesComponent implements OnInit {
 
   public delete($event, hero: Hero) {
     $event.stopPropagation();
+    this.messageService.add(`Deleting hero #${hero.id} ${hero.name}`);
     this.heroService.delete(hero.id)
       .subscribe(() => {
         this.fetchHeroes();

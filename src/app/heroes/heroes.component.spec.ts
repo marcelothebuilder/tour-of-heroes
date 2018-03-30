@@ -18,11 +18,13 @@ class StubRouterLink {
 }
 
 let HeroServiceStub;
+let MessageServiceStub;
 
 describe('HeroesComponent', () => {
   let fixture: ComponentFixture<HeroesComponent>;
 
   HeroServiceStub = jasmine.createSpyObj('HeroServiceStub', ['all', 'delete']);
+  MessageServiceStub = jasmine.createSpyObj('MessageServiceStub', ['add']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -34,9 +36,7 @@ describe('HeroesComponent', () => {
         },
         {
           provide: MessageService,
-          useValue: {
-            add: () => null
-          }
+          useValue: MessageServiceStub
         }
       ]
     })
@@ -47,101 +47,129 @@ describe('HeroesComponent', () => {
     fixture = TestBed.createComponent(HeroesComponent);
   });
 
-  it('should create', () => {
-    HeroServiceStub.all.and.returnValue(Observable.of([]));
-    expect(fixture.componentInstance).toBeTruthy();
+  describe('when being created', () => {
+    it('should create', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([]));
+      expect(fixture.componentInstance).toBeTruthy();
+    });
+
+    it('should display a list with one hero', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([
+        {
+          id: 1
+        }
+      ]));
+
+      fixture.detectChanges();
+
+      const element: HTMLElement = fixture.nativeElement;
+      const lis = element.querySelectorAll('li');
+      expect(lis.length).toBe(1);
+    });
+
+    it('should display a list with two heroes', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([
+        {
+          id: 1
+        },
+        {
+          id: 2
+        }
+      ]));
+
+      fixture.detectChanges();
+
+      const element: HTMLElement = fixture.nativeElement;
+      const lis = element.querySelectorAll('li');
+      expect(lis.length).toBe(2);
+    });
+
+    it('should display a list with hero paschoal', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([
+        {
+          id: 1,
+          name: 'paschoal'
+        }
+      ]));
+
+      fixture.detectChanges();
+
+      const element: HTMLElement = fixture.nativeElement;
+      const span = element.querySelector('.name');
+      const spanText = span.textContent;
+
+      expect(spanText).toBe('paschoal');
+    });
+
+    it('should display a list item with deletion button', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([
+        {
+          id: 1,
+          name: 'paschoal'
+        }
+      ]));
+
+      fixture.detectChanges();
+
+      const element: HTMLElement = fixture.nativeElement;
+      const li = element.querySelector('li');
+      const button = li.querySelector('button');
+      const buttonText = button.textContent;
+
+      expect(buttonText.toLocaleLowerCase()).toContain('delete');
+    });
   });
 
-  it('should display a list with one hero', () => {
-    HeroServiceStub.all.and.returnValue(Observable.of([
-      {
-        id: 1
-      }
-    ]));
 
-    fixture.detectChanges();
+  describe('when deleting a hero', () => {
+    it('should delete the hero', () => {
+      HeroServiceStub.all.and.returnValues(Observable.of([
+        {
+          id: 2,
+          name: 'paschoal'
+        }
+      ]),
+        Observable.of([])
+      );
 
-    const element: HTMLElement = fixture.nativeElement;
-    const lis = element.querySelectorAll('li');
-    expect(lis.length).toBe(1);
+      HeroServiceStub.delete.and.returnValue(Observable.of(null));
+
+      fixture.detectChanges();
+
+      const element: DebugElement = fixture.debugElement;
+      const deletionButton = element.query(By.css('button'));
+      deletionButton.triggerEventHandler('click', { stopPropagation: () => null });
+
+      fixture.detectChanges();
+
+      expect(HeroServiceStub.delete).toHaveBeenCalledWith(2);
+
+      const li = fixture.nativeElement.querySelectorAll('li');
+
+      expect(li.length).toBe(0);
+    });
+
+    it('should log', () => {
+      HeroServiceStub.all.and.returnValue(Observable.of([
+        {
+          id: 2,
+          name: 'paschoal'
+        }
+      ]));
+
+      HeroServiceStub.delete.and.returnValue(Observable.of(null));
+
+      fixture.detectChanges();
+
+      const element: DebugElement = fixture.debugElement;
+      const deletionButton = element.query(By.css('button'));
+      deletionButton.triggerEventHandler('click', { stopPropagation: () => null });
+
+      fixture.detectChanges();
+
+      expect(MessageServiceStub.add).toHaveBeenCalledWith(`Deleting hero #2 paschoal`);
+    });
   });
 
-  it('should display a list with two heroes', () => {
-    HeroServiceStub.all.and.returnValue(Observable.of([
-      {
-        id: 1
-      },
-      {
-        id: 2
-      }
-    ]));
-
-    fixture.detectChanges();
-
-    const element: HTMLElement = fixture.nativeElement;
-    const lis = element.querySelectorAll('li');
-    expect(lis.length).toBe(2);
-  });
-
-  it('should display a list with hero paschoal', () => {
-    HeroServiceStub.all.and.returnValue(Observable.of([
-      {
-        id: 1,
-        name: 'paschoal'
-      }
-    ]));
-
-    fixture.detectChanges();
-
-    const element: HTMLElement = fixture.nativeElement;
-    const span = element.querySelector('.name');
-    const spanText = span.textContent;
-
-    expect(spanText).toBe('paschoal');
-  });
-
-  it('should display a list item with deletion button', () => {
-    HeroServiceStub.all.and.returnValue(Observable.of([
-      {
-        id: 1,
-        name: 'paschoal'
-      }
-    ]));
-
-    fixture.detectChanges();
-
-    const element: HTMLElement = fixture.nativeElement;
-    const li = element.querySelector('li');
-    const button = li.querySelector('button');
-    const buttonText = button.textContent;
-
-    expect(buttonText.toLocaleLowerCase()).toContain('delete');
-  });
-
-  it('should delete the hero', () => {
-    HeroServiceStub.all.and.returnValues(Observable.of([
-      {
-        id: 2,
-        name: 'paschoal'
-      }
-    ]),
-      Observable.of([])
-    );
-
-    HeroServiceStub.delete.and.returnValue(Observable.of(null));
-
-    fixture.detectChanges();
-
-    const element: DebugElement = fixture.debugElement;
-    const deletionButton = element.query(By.css('button'));
-    deletionButton.triggerEventHandler('click', null);
-
-    fixture.detectChanges();
-
-    expect(HeroServiceStub.delete).toHaveBeenCalledWith(2);
-
-    const li = fixture.nativeElement.querySelectorAll('li');
-
-    expect(li.length).toBe(0);
-  });
+  
 });
