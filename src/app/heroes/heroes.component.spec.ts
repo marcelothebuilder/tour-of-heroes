@@ -170,6 +170,4 @@ describe('HeroesComponent', () => {
       expect(MessageServiceStub.add).toHaveBeenCalledWith(`Deleting hero #2 paschoal`);
     });
   });
-
-  
 });
