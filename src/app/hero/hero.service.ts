@@ -5,4 +5,5 @@ export interface HeroService {
     all(): Observable<Array<Hero>>;
     topRanked(quantity: number): Observable<Array<Hero>>;
     byId(id: number): Observable<Hero>;
+    delete(id: number): Observable<any>;
 }

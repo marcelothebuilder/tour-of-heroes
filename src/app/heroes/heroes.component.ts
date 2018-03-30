@@ -14,6 +14,10 @@ export class HeroesComponent implements OnInit {
   public heroes: Hero[] = [];
   public selectedHero: Hero;
 
+  constructor(@Inject(HeroServiceInjection) private heroService: HeroService,
+    private messageService: MessageService) {
+  }
+
   public onSelect(hero: Hero) {
     this.selectedHero = hero;
   }
@@ -26,12 +30,16 @@ export class HeroesComponent implements OnInit {
     return this.selectedHero.id === hero.id;
   }
 
-  public isAnyHeroSelected(): boolean {
-    return this.selectedHero !== undefined;
+  public delete($event, hero: Hero) {
+    $event.stopPropagation();
+    this.heroService.delete(hero.id)
+      .subscribe(() => {
+        this.fetchHeroes();
+      });
   }
 
-  constructor(@Inject(HeroServiceInjection) private heroService: HeroService,
-    private messageService: MessageService) {
+  public isAnyHeroSelected(): boolean {
+    return this.selectedHero !== undefined;
   }
 
   ngOnInit() {

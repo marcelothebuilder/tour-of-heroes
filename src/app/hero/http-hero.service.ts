@@ -26,5 +26,9 @@ export class HttpHeroService implements HeroService {
         return this.httpClient.get<Hero>(`hero/${id}`);
     }
 
+    public delete(id: number): Observable<any> {
+        return this.httpClient.delete<any>(`hero/${id}`);
+    }
+
 
 }

@@ -30,5 +30,9 @@ export class StaticHeroService implements HeroService {
       });
   }
 
+  public delete(id: number): Observable<any> {
+    throw new Error("Method not implemented.");
+  }
+
 
 }
