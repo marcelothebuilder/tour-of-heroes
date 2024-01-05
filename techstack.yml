@@ -1,7 +1,8 @@
 repo_name: marcelothebuilder/tour-of-heroes
 report_id: 130bdad693888408511b106d2104e979
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T19:49:40+00:00'
+timestamp: '2024-01-05T08:52:22+00:00'
 requested_by: marcelothebuilder
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes
   detection_source: Repo Metadata
 - name: Angular
   description: A platform for building mobile and desktop web applications
@@ -37,7 +40,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Javascript MVC Frameworks
   image_url: https://img.stackshare.io/service/3745/cb8U-gL6_400x400.jpg
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -50,6 +53,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -62,7 +66,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Concurrency Frameworks
   image_url: https://img.stackshare.io/service/1796/984368.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -74,6 +78,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes
   detection_source: Repo Metadata
 - name: Jasmine
   description: DOM-less simple JavaScript testing framework
@@ -84,7 +89,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -98,7 +103,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Browser Testing
   image_url: https://img.stackshare.io/service/1420/TidYGd6a.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -111,6 +116,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Headless Browsers
   image_url: https://img.stackshare.io/service/1832/phantomjs.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -124,7 +130,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/1754/protractor-logo1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -136,6 +142,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/5561/303157.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -147,6 +154,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/yarn.lock
   detection_source: yarn.lock
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -158,6 +166,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -169,6 +178,7 @@ tools:
   category: Back Office
   sub_category: Web Browser
   image_url: https://img.stackshare.io/service/8705/768px-Firefox_Logo__2017.svg.png
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -182,7 +192,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16010/default_af9df0bc9fa88191d2fe609204c5bd7599c1a797.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -196,7 +206,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16000/default_976847109ccfe67d00b33d9ff71329b6e82f5f89.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -210,7 +220,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15913/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -224,7 +234,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15917/default_4040fefea2f98006727f63d042275b96a275ab2d.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -238,7 +248,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15927/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -252,7 +262,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15944/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -266,7 +276,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15977/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 21:31:58.000000000 Z
@@ -280,7 +290,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16047/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -294,7 +304,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15921/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -308,7 +318,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15933/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -322,7 +332,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15965/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -336,7 +346,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15924/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 21:31:58.000000000 Z
@@ -350,7 +360,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16060/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 21:31:58.000000000 Z
@@ -364,7 +374,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 21:31:58.000000000 Z
@@ -378,7 +388,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17249/default_8da30b412bf0dbb63f862bee0dfab0a32df2fb69.png
-  detection_source_url: yarn.lock
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/yarn.lock
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 20:57:28.000000000 Z
@@ -392,7 +402,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15956/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -406,7 +416,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15869/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -420,7 +430,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15905/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -434,7 +444,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16066/default_8725384794b44fe56f31da1d21ae759cf07be7a5.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-18 21:31:58.000000000 Z
@@ -448,7 +458,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15860/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -462,7 +472,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15998/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -476,7 +486,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16026/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: yarn.lock
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/yarn.lock
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -490,7 +500,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15886/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -504,7 +514,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15999/default_7a465bc85b23fd837cbc038fd1d504632c41a884.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -518,7 +528,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15947/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: yarn.lock
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/yarn.lock
   detection_source: package.json
   last_updated_by: Marcelo Paixão Resende
   last_updated_on: 2018-03-30 20:49:12.000000000 Z
@@ -532,7 +542,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
@@ -546,7 +556,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15915/default_59a1b5716eefa3750c20936c3d53ff13a6390ee1.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/marcelothebuilder/tour-of-heroes/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Angular CLI
   last_updated_on: 2018-03-18 13:40:35.000000000 Z
